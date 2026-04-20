@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primaria: #D4917A;
+  --color-cta: #D9845A;
+  --color-cta-hover: #C04A37;
+  --color-decorativo: #E8C4B8;
+  --color-fundo: #F8F4F2;
+  --color-texto-escuro: #2C1810;
+  --color-texto-medio: #6B4F46;
+  --color-texto-suave: #9E8880;
+  --color-branco: #FFFFFF;
+
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'DM Sans', sans-serif;
+}
+
+@layer utilities {
+  .animate-subtle-glow {
+    animation: subtle-glow 3s infinite;
+  }
+}
+
+@keyframes subtle-glow {
+  0% { box-shadow: 0 0 0 0 rgba(217, 132, 90, 0.4); }
+  70% { box-shadow: 0 0 0 12px rgba(217, 132, 90, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(217, 132, 90, 0); }
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-fundo);
+  color: var(--color-texto-escuro);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
